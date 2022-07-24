@@ -4,15 +4,15 @@ var score = 0;
 var highScore = [
   {
     name: "Kretos",
-    value: 5
+    value: 15
   },
   {
     name: "Lynx",
-    value: 4
+    value: 9
   },
   {
     name: "Titan",
-    value: 4
+    value: 8
   }
 
 ]
@@ -23,14 +23,14 @@ console.log("Welcome  " + userName + "!!! \n Let's start the game");
 function play(question, userAnswer) {
   var answer = readlineSync.question(question);
 
-  if (answer.toUpperCase() == userAnswer.toUpperCase()) {
+  if (answer.toLowerCase() === userAnswer.toLowerCase()) {
     console.log("Right !!!");
     score = score + 1;
   }
   else {
     console.log("Wrong!!");
   }
-  console.log("Your current score is = " + score);
+  //console.log("Your current score is = " + score);
 }
 
 // play(, "Shelly");
@@ -47,7 +47,7 @@ var questions = [
   },
   {
     question: "What is Sheldon's favorite number?",
-    answer: 73
+    answer: "73"
   }
 ]
 
@@ -81,9 +81,9 @@ if (score === 3) {
   }
 
 }
-else if (score === 6) {
+if (score === 6) {
 
-  if (readlineSync.question("Hey you have entered in level-3 of the game...Do you wish to continue? ")) {
+  if (readlineSync.keyInYN("Hey you have entered in level-3 of the game...Do you wish to continue? ")) {
     var questions = [
       {
         question: "\n Where did Howard get his engineering degree?",
@@ -122,14 +122,15 @@ else if (score === 6) {
 
   }
 }
-console.log("The Highest Scores are");
 
-for (i = 0; i < highScore.length; i++) {
+for (i = 0; i < 1; i++) {
 
   var currentHigh = highScore[i];
   if (currentHigh.value < score) {
     console.log("Congrats !!! U have beaten the high score");
-
+  }
+  else {
+    console.log("Your score is:" + score);
   }
 
 }
