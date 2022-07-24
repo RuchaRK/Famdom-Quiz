@@ -1,0 +1,1 @@
+Just a simple JS code to create quiz game.
