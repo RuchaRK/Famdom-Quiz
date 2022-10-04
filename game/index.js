@@ -4,7 +4,7 @@ var score = 0;
 var highScore = [
   {
     name: "Kretos",
-    value: 15
+    value: 16
   },
   {
     name: "Lynx",
@@ -48,6 +48,14 @@ var questions = [
   {
     question: "What is Sheldon's favorite number?",
     answer: "73"
+  },
+  {
+    question: "How many times does Sheldon have to knock on a door and say a person's name before he'll go in?",
+    answer: "Three"
+  },
+  {
+    question: "What apartment do Penny and Leonard live in?",
+    answer: "4A"
   }
 ]
 
@@ -56,7 +64,7 @@ for (i = 0; i < questions.length; i++) {
   play(currentQuestion.question, currentQuestion.answer);
 }
 
-if (score === 3) {
+if (score === 5) {
 
   if (readlineSync.keyInYN("Hey you have entered in level-2 of the game...Do you wish to continue? ")) {
     var questions = [
@@ -71,6 +79,15 @@ if (score === 3) {
       {
         question: "What restaurant does Penny work at for a large part of the series?",
         answer: "The Cheesecake Factory"
+      },
+      {
+        question: "Where does Leonard get married?",
+        answer: "Las Vegas"
+      },
+      {
+        question: "What instrument does Leonard play?",
+        answer: "Cello"
+
       }
 
     ]
@@ -81,7 +98,7 @@ if (score === 3) {
   }
 
 }
-if (score === 6) {
+if (score === 10) {
 
   if (readlineSync.keyInYN("Hey you have entered in level-3 of the game...Do you wish to continue? ")) {
     var questions = [
